@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+
+</style>
+
+    <title>BPL Example Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script type="text/javascript" 
+        src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
+    <script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/views/BPL/VisitsCirc_VisitsExp?:embed=y&:display_count=yes",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+            
+            var viz = new tableau.Viz(containerDiv, url, options); 
+            // Create a viz object and embed it in the container div.
+        }
+    </script>
+
+</head>
+
+<body onload="initViz();">
+    <div id="vizContainer" style="width:800px; height:700px;"></div>    
+<div class="nav_cont">
+  <a href="index.html"><button class="regbtn">Home</button></a>
+
+    <div class="dropdown">
+
+  <button class="dropbtn">Digital Numbers</button>
+  <div class="dropdown-content animsition">
+    <a href="visits.html">Total Spending vs Digital</a>
+    <a href="ebook_spend.html">Spending per E-Book</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+  </div>
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- animsition.js -->
+<script src="../dist/js/animsition.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in-right-sm',
+    outClass: 'fade-out-right-sm',
+    inDuration: 1500,
+    outDuration: 800,
+    
+    linkElement: '.animsition-link',
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+</html>
+
