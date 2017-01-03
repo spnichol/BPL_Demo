@@ -30,9 +30,32 @@
     </script>
 
 </head>
-
+<nav class="navbar navbar-light  navbar-static-top bg-faded">
+  <a class="navbar-brand" href="#">PBL Demo Dashboard</a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="ebook_spend.html">Digital Progress</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="visits.html">Visitor Traffic</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="visits.html">Total Spending vs Digital</a>
+          <a class="dropdown-item" href="ebook_spend.html">Spending per E-Book</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
+  </ul>
+</nav>
 <body onload="initViz();">
-    <div id="vizContainer" style="width:800px; height:700px;"></div>    
+    <div id="vizContainer"></div>    
 <div class="nav_cont">
   <a href="index.html"><button class="regbtn">Home</button></a>
 

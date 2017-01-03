@@ -1,49 +1,64 @@
 
 
+
     <!DOCTYPE html>
 <html>
 
 <head>
-     <title>BPL: Visits Overlook</title>
+     <title>Digital Spending</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="../dist/css/animsition.min.css"/>
+   
         <script type="text/javascript" 
         src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
-    <script type="text/javascript">
-        function initViz() {
-            var containerDiv = document.getElementById("vizContainer"),
-                url = "https://public.tableau.com/views/BPL/Share_Dig_Dash?:embed=y&:display_count=yes",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
-                        console.log("Run this code when the viz has finished loading.");
-                    }
-                };
-            
-            var viz = new tableau.Viz(containerDiv, url, options); 
-            // Create a viz object and embed it in the container div.
-        }
-    </script>
+ 
 
 </head>
 
+
+<nav class="navbar navbar-light  navbar-static-top bg-faded">
+  <a class="navbar-brand" href="#">PBL Demo Dashboard</a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="ebook_spend.html">Digital Progress</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="visits.html">Visitor Traffic</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="visits.html">Total Spending vs Digital</a>
+          <a class="dropdown-item" href="ebook_spend.html">Spending per E-Book</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
 <body onload="initViz();">
-    <div id="vizContainer" style="width:800px; height:700px;"></div>    
-<div class="nav_cont">
-  <a href="index.html"><button class="regbtn">Home</button></a>
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-offset-1 col-sm-10">
 
-    <div class="dropdown">
-
-  <button class="dropbtn">Digital Numbers</button>
-  <div class="dropdown-content animsition">
-    <a href="visits.html">Total Spending vs Digital</a>
-    <a href="ebook_spend.html">Spending per E-Book</a>
-    <a href="#">Link 3</a>
-  </div>
+<div class='tableauPlaceholder' id='viz1483479498506' style='position: relative'><noscript><a href='#'><img alt='dash_visits_vs_circ ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;N7&#47;N7XTQG35C&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='shared&#47;N7XTQG35C' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;N7&#47;N7XTQG35C&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1483479498506');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 </div>
-  </div>
+</div>
+</div>
+</div>
+<div class="row" id="graph2">
+<div class="col-sm-offset-1 col-sm-10">
+
+<div class='tableauPlaceholder' id='viz1483479571569' style='position: relative'><noscript><a href='#'><img alt='dash_visitsvs_expend ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;BP&#47;BPL&#47;dash_visitsvs_expend&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='BPL&#47;dash_visitsvs_expend' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;BP&#47;BPL&#47;dash_visitsvs_expend&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1483479571569');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+</div>
+</div>
 </body>
 
 
@@ -53,31 +68,6 @@
 <!-- animsition.js -->
 <script src="../dist/js/animsition.min.js"></script>
 
-<script>
-$(document).ready(function() {
-  $(".animsition").animsition({
-    inClass: 'fade-in-right-sm',
-    outClass: 'fade-out-right-sm',
-    inDuration: 1500,
-    outDuration: 800,
-    
-    linkElement: '.animsition-link',
-    loading: true,
-    loadingParentElement: 'body', //animsition wrapper element
-    loadingClass: 'animsition-loading',
-    loadingInner: '', // e.g '<img src="loading.svg" />'
-    timeout: false,
-    timeoutCountdown: 5000,
-    onLoadEvent: true,
-    browser: [ 'animation-duration', '-webkit-animation-duration'],
-    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-    overlay : false,
-    overlayClass : 'animsition-overlay-slide',
-    overlayParentElement : 'body',
-    transition: function(url){ window.location.href = url; }
-  });
-});
 </script>
 </html>
 
