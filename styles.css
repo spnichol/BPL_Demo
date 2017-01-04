@@ -8,6 +8,10 @@ nav {
     border-radius: 0px;
 }
 
+.navbar-brand {
+    background-color: #EF8354;
+}
+
 li, a {
     color: white;
     border-radius: 0px;
@@ -15,9 +19,17 @@ li, a {
 }
 
 .tableauPlaceholder  {
-    margin-top: 10px;
+
     margin-bottom: 30px;
     background-color: #BFC0C0;
+}
+
+.tabCanvas tab-widget {
+   text-align: center;
+}
+
+.dropdown-menu{
+    background-color: #4F5D75;
 }
 
 @import "compass/css3";
