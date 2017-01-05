@@ -114,3 +114,9 @@ li, a {
 div.tab-toolbar {
     display: none;
 }
+
+* { margin:0; padding:0; }
+a img { border-style:none; }
+a { text-decoration:none; } 
+ul li { list-style-type:none; margin:0; padding:0; }
+hr { margin:0; padding:0; display:none; }
