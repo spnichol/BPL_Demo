@@ -183,9 +183,34 @@ write.csv(density_wifi, "clean_wifi.csv")
 #calculate percentage change for periods 
 
 time <- ts(data.frame(x1=c(3:14), x2=c(15:26), x=c(27:38)), start=2014, frequency=12)
-time
+
+
+#create TS for all neighborhoods 
+all <- density_wifi[, (3:38)]
+time_period <- names(all)
+all_sums <- colSums(all, na.rm=TRUE)
+
+df_all <- all_sums
+df_all <- as.data.frame(df_all)
+df_all.ts <- ts(df_all, frequency=12, start=2014)
+df_all.ts.d <- decompose(df_all.ts)
+df_all.ts
+plot(df_all.ts.d)
+##create subset of all crime by category 
+crime_groups_melt <- crime_groups %>% group_by(Month_Year, Category) %>% tally()
+##melt subset and set as DF
+crime_groups_melt <- melt(crime_groups_melt, id=c("Month_Year", "Category", "nn"), na.rm=TRUE)
+crime_groups_melt <- as.data.frame(crime_groups_melt)
+##cast category to header 
+crime_groups_melt <- dcast(crime_groups_melt, Month_Year ~ Category, value.var="nn")
+crime_groups_melt <- as.data.frame(crime_groups_melt)
 
 
 #read in total_wifi to calculate BPL share of total free wifi in BK 
 
 total_Wifi <- read.csv("total_wifi.csv")
+
+
+#read in teen trends 
+
+teen_trends <- read.csv("teen_trends.csv")
